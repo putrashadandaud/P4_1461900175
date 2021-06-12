@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PerpusController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('perpus_0175', PerpusController::class);
+Route::get('/Perpus/export','App\Http\Controllers\PerpusController@export');
